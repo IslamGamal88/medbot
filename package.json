@@ -1,0 +1,14 @@
+{
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "scripts": {
+    "start": "concurrently \"bun run server\" \"bun run client\"",
+    "server": "cd server && bun start",
+    "client": "cd client && bun start",
+    "install-client": "cd client && bun install",
+    "install-server": "cd server && bun install",
+    "build-client": "cd client && bun build"
+  }
+}

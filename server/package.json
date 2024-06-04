@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "bun --hot app.js"
+    "dev": "bun --hot app.js",
+    "start": "bun --bun run app.js"
   },
   "keywords": [],
   "author": "",
