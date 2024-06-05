@@ -1,14 +1,27 @@
 {
-  "dependencies": {},
-  "devDependencies": {
-    "concurrently": "^8.2.2"
-  },
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "concurrently \"bun run server\" \"bun run client\"",
-    "server": "cd server && bun start",
-    "client": "cd client && bun start",
-    "install-client": "cd client && bun install",
-    "install-server": "cd server && bun install",
-    "build-client": "cd client && bun build"
+    "dev": "bun --bun next dev",
+    "build": "bun --bun next build",
+    "start": "bun --bun next start",
+    "lint": "bun --bun next lint"
+  },
+  "dependencies": {
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "socket.io-client": "^4.7.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }
