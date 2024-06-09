@@ -8,6 +8,7 @@
     "start": "bun --bun next start",
     "lint": "bun --bun next lint"
   },
+  "proxy": "https://pronationbot.vercel.app:8000",
   "dependencies": {
     "next": "14.2.3",
     "react": "^18",
