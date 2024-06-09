@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 import io from "socket.io-client";
 const URL =
   process.env.NODE_ENV === "production"
-    ? "https://medbot-server.vercel.app"
+    ? "https://pronation.vercel.app"
     : "http://localhost:8000";
 const socket = io(URL);
 
