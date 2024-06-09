@@ -7,7 +7,15 @@ const URL =
   process.env.NODE_ENV === "production"
     ? "https://pronation.vercel.app"
     : "http://localhost:8000";
-const socket = io(URL);
+const socket = io(URL, {
+  cert:
+    process.env.NODE_ENV === "production" ? process.env.SSL_CERT : "",
+  key:
+    process.env.NODE_ENV === "production" ? process.env.SSL_KEY : "",
+  reconnection: true,
+  reconnectionAttempts: 5,
+  transports: ["websocket", "polling"],
+});
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
