@@ -3,8 +3,11 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import io from "socket.io-client";
-
-const socket = io("http://localhost:8000");
+const URL =
+  process.env.NODE_ENV === "production"
+    ? "https://medbot-server.vercel.app"
+    : "http://localhost:8000";
+const socket = io(URL);
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
